@@ -1,0 +1,15 @@
+server:
+  host: "0.0.0.0"
+  port: 1008
+
+mysql_master:
+  host: "127.0.0.1"
+  port: 11111
+  master_user: "has_user"
+  master_pass: "C63456780"
+  destination: "test"
+  so_timeout: 60000
+  idle_timeout: 3600000  #60*60*1000
+
+mysql_slave:
+  Database: has_user:C345556666780@tcp(127.0.0.1:3306)/admin_service?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai

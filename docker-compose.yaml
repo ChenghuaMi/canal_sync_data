@@ -1,0 +1,19 @@
+version: "3"
+services:
+  mysql:
+    image: canal/canal-server
+    container_name: trade_canal_server
+    restart: always
+    privileged: true
+    environment:
+      - TZ=Asia/Shanghai
+      - canal.instance.master.address=127.0.0.1:3306 # 
+      - canal.instance.dbUsername=has_user  #master user_name
+      - canal.instance.dbPassword=C3cc456780  #master password
+      - canal.destinations=test  #destinations
+      - canal.instance.connectionCharset=UTF-8
+      - canal.instance.tsdb.enable=true
+      - canal.instance.gtidon=false
+      - canal.instance.filter.regex=orca_trade\..*  # 同步源库
+    ports:
+      - "11111:11111"
