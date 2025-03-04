@@ -1,7 +1,7 @@
-# orca_sync_service
+# sync_service
 
-## 交易服务数据同步到后台
-## 端口  1008
+## docker-compose 安装canal
+## golang 客户端实现数据同步
 
 # build
-docker build -t trade-canal-client:release . 
+docker build -t canal-client:release . 
